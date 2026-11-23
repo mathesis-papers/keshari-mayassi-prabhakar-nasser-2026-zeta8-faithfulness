@@ -1,0 +1,15 @@
+{
+  "id": "keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness",
+  "revision": 2,
+  "problem_ids": ["keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness"],
+  "topic": "Faithfulness and color-subgroup kernels of homogeneous local multi-virtual twin representations",
+  "title": "Extending Keshari–Mayassi–Prabhakar–Nasser's unfaithfulness theorem: a negative answer to their zeta8 faithfulness question",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Extending Keshari, Mayassi, Prabhakar and Nasser's unfaithfulness theorem (May 13, 2026, arXiv:2605.13090v1, Theorem 4.2(b) and Question 4.3, page 17), we answer their Question 4.3 negatively on three strands with at least three virtual colors: an infinite-order commutator has identity image for every allowed parameter, including a outside {0,1,-1}. We determine the kernel on the same-position virtual subgroup by exponent sums; its intersection over all parameter choices is the derived subgroup of a free group of rank k-1. The obstruction also applies to both associated subgroups and all eight homogeneous 2-local families. A related construction strengthens Nasser–Ocampo's welded unfaithfulness result by giving an infinite-order kernel element on three strands with at least two virtual colors.",
+  "summary": "An exact color-subgroup kernel formula, a uniform infinite-order obstruction for all eight three-strand local families with at least three colors, and an infinite-order extension of a known welded result.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/4a7117cee792c7d5598d7f4770577d557fb45137/D5/S3/Quantum/Algebra/Knot/MultiVirtualTwinZetaEightFaithfulnessRefutation.lean"
+}

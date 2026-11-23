@@ -1,0 +1,313 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,tabularx}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,allcolors=blue,breaklinks=true]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\C}{\mathbb C}
+\title{Extending Keshari--Mayassi--Prabhakar--Nasser's unfaithfulness theorem:
+a negative answer to their \texorpdfstring{$\zeta_8$}{zeta8} faithfulness question}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{November 17, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending Keshari, Mayassi, Prabhakar and Nasser's unfaithfulness theorem
+(May 13, 2026, arXiv:2605.13090v1, Theorem~4.2(b) and Question~4.3, p.~17),
+we answer their Question~4.3 negatively on three strands with at least
+three virtual colors: an infinite-order commutator has identity image for
+every allowed parameter, including $a\ne0,\pm1$.
+We determine the kernel on the same-position virtual subgroup by exponent
+sums; its intersection over all parameter choices is the derived subgroup
+of a free group of rank $k-1$.
+The obstruction also applies to both associated subgroups and all eight
+homogeneous $2$-local families. A related construction strengthens
+Nasser--Ocampo's welded unfaithfulness result by giving an infinite-order
+kernel element on three strands with at least two virtual colors.
+\end{abstract}
+
+\section{The question and its setting}
+Keshari--Mayassi--Prabhakar--Nasser prove that the eighth homogeneous
+$2$-local family is unfaithful at $a=0,\pm1$ and pose
+\cite[Question~4.3, p.~17]{KMPN}: ``for $a\ne0,\pm1$, is the
+representation $\zeta_8$ faithful?'' This is a question, not an assertion
+of faithfulness. We extend their Theorem~4.2(b) to every $a$ when $n=3$
+and $k\ge3$, by a virtual-color obstruction independent of the twin block.
+The exact color-subgroup kernel explains both the obstruction and the
+two-color boundary. Equal and opposite involution blocks already give
+product and square-product kernels in Nasser--Chreif--Dally
+\cite[Theorem~11(2), proof Case~2, p.~7]{NCD}; our two-color formula
+includes these specializations and all root-of-unity orders.
+Nasser--Ocampo subsequently constructed the welded
+groups suggested in \cite[Section~6, p.~26]{KMPN}; their
+\cite[Definition~2.1 and Proposition~3.4]{NO} concern that quotient,
+rather than the general $\zeta_8$ question.
+
+We use the full presentation in \cite[Section~3, (11)--(19), p.~6]{KMPN}.
+For $k\ge1$, $n\ge2$, let $G_{k,n}=M_kVT_n$ have generators
+$s_i,\rho_i^\alpha$, where $1\le i\le n-1$ and $0\le\alpha<k$,
+and precisely these relations:
+\begin{align}
+ s_i^2&=1,&(\rho_i^\alpha)^2&=1,\label{eq:squares}\\
+ s_is_j&=s_js_i,&\rho_i^\alpha\rho_j^\beta&=\rho_j^\beta\rho_i^\alpha,
+ &\rho_i^\alpha s_j&=s_j\rho_i^\alpha\quad(|i-j|\ge2),\label{eq:far}\\
+ \rho_i^\alpha\rho_{i+1}^\alpha\rho_i^\alpha
+ &=\rho_{i+1}^\alpha\rho_i^\alpha\rho_{i+1}^\alpha,\label{eq:braid}\\
+ \rho_i^\alpha\rho_{i+1}^\beta\rho_i^\beta
+ &=\rho_{i+1}^\beta\rho_i^\beta\rho_{i+1}^\alpha\quad(\alpha<\beta),\label{eq:mixed1}\\
+ \rho_i^\alpha\rho_{i+1}^\alpha\rho_i^\beta
+ &=\rho_{i+1}^\beta\rho_i^\alpha\rho_{i+1}^\alpha\quad(\alpha<\beta),\label{eq:mixed2}\\
+ \rho_i^\alpha\rho_{i+1}^\alpha s_i
+ &=s_{i+1}\rho_i^\alpha\rho_{i+1}^\alpha.\label{eq:detour}
+\end{align}
+In \eqref{eq:braid}--\eqref{eq:detour}, $1\le i\le n-2$; other indices
+range over the generator ranges. The symbol $1$ denotes the group identity.
+
+For $a\in\C$ and $b,y_0,\ldots,y_{k-1}\in\C^*$, put
+\[
+ S(a,b)=\begin{pmatrix}-a&(1-a^2)/b\\b&a\end{pmatrix},\qquad
+ R(y)=\begin{pmatrix}0&y^{-1}\\y&0\end{pmatrix}.
+\]
+The source's Theorem~4.1(8), p.~15, defines
+\[
+ \zeta_8(s_i)=I_{i-1}\oplus S(a,b)\oplus I_{n-i-1},\qquad
+ \zeta_8(\rho_i^\alpha)=I_{i-1}\oplus R(y_\alpha)\oplus I_{n-i-1}.
+\]
+Here $I_d$ is the $d\times d$ identity, with empty blocks omitted.
+These are involutions, and the adjacent relations are identities on
+three coordinates; disjoint supports give the far relations.
+We write $[u,v]=uvu^{-1}v^{-1}$.
+
+\section{The exact color-subgroup kernel}
+\begin{theorem}\label{thm:kernel}
+Let $k\ge1$ and $n=3$. Write $r_\alpha=\rho_1^\alpha$,
+$V=\langle r_0,\ldots,r_{k-1}\rangle\le G_{k,3}$ and
+$x_\beta=r_0r_\beta$ for $1\le\beta<k$.
+Then $V$ is the free product of $k$ groups of order two.
+Its even-word subgroup $F$ is free on the $x_\beta$.
+For $h\in F$, let $e_\beta(h)\in\mathbb Z$ be the exponent sum of
+$x_\beta$ in $h$, and put $q_\beta=y_\beta/y_0$. For every allowed
+$a,b,y_\alpha$,
+\begin{equation}\label{eq:kernel}
+ \ker(\zeta_8|_V)
+ =\left\{h\in F:\prod_{\beta=1}^{k-1}q_\beta^{e_\beta(h)}=1\right\}.
+\end{equation}
+In particular, its intersection over all parameter choices is $F'=[F,F]$.
+If the $q_\beta$ are multiplicatively independent, the kernel itself is $F'$.
+\end{theorem}
+\begin{proof}
+Let $H=\langle v,u_0,\ldots,u_{k-1}\mid v^2=u_\alpha^2=1\rangle$,
+the free product of $k+1$ groups of order two. Reduced words in $H$
+are words with no equal adjacent letters, with cancellation of equal pairs.
+Define on both positions
+\[
+ \pi(s_1)=\pi(s_2)=v,\qquad
+ \pi(\rho_1^\alpha)=\pi(\rho_2^\alpha)=u_\alpha.
+\]
+Squares hold, and $n=3$ gives no far relations. Both sides of
+\eqref{eq:braid} map to $u_\alpha^3$; those of
+\eqref{eq:mixed1} reduce to $u_\alpha$, and those of
+\eqref{eq:mixed2} to $u_\beta$. Both sides of
+\eqref{eq:detour} reduce to $v$. Thus $\pi$ is a homomorphism.
+The assignment $v\mapsto s_1$, $u_\alpha\mapsto r_\alpha$ defines
+a homomorphism $\iota:H\to G_{k,3}$, since all these elements square
+to $1$. The composite $\pi\iota$ fixes every generator of $H$.
+Therefore $\iota$ is injective, proving the assertion about $V$.
+
+For completeness, let $E$ be the free group on symbols $x_\beta$.
+Inverting each free generator defines an involutory automorphism $\tau$
+of $E$. The semidirect product $E\rtimes_\tau\langle t\rangle$ has
+relations $t^2=1$ and $tx_\beta t=x_\beta^{-1}$.
+Substituting $r_0=t$ and $r_\beta=tx_\beta$ gives exactly
+$r_\alpha^2=1$, and the inverse substitution is $x_\beta=r_0r_\beta$.
+Thus $V\cong E\rtimes C_2$, and parity has kernel $E=F$.
+This also covers $k=1$, when $F$ is trivial.
+
+Direct multiplication gives
+\[
+ R(x)R(z)=\operatorname{diag}(z/x,x/z),\qquad
+ \zeta_8(x_\beta)=D(q_\beta),\quad D(q)=\operatorname{diag}(q,q^{-1},1).
+\]
+Consequently $\zeta_8(h)=D(\prod_\beta q_\beta^{e_\beta(h)})$ for
+$h\in F$. An odd word has an invertible anti-diagonal $2\times2$
+block, so cannot have identity image. This proves \eqref{eq:kernel}.
+The exponent-sum map $F\to\mathbb Z^{k-1}$ is its abelianization,
+so its kernel is $F'$. If some $e_\beta(h)\ne0$, choosing
+$y_0=1$, $q_\beta=2$ and all other $q_\gamma=1$ gives a nonidentity
+image. Hence the intersection is exactly $F'$. Multiplicative
+independence gives the final assertion directly.
+\end{proof}
+
+\begin{corollary}\label{cor:main}
+For $k\ge3$, $n=3$ and all allowed parameters,
+\[
+ w=[r_0r_1,r_0r_2]
+\]
+has infinite order and lies in $\ker\zeta_8$. It lies in both
+$M_kVPT_3$ and $M_kVHT_3$, and their restricted representations
+have $\langle w\rangle$ in their kernels.
+Moreover, all eight homogeneous $2$-local families in
+\cite[Theorem~4.1]{KMPN}, and every representation equivalent to them,
+kill $w$ and are unfaithful in this range.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:kernel} puts $w$ in $F'$ and hence in every kernel.
+Alternatively its two factors have commuting diagonal images.
+For every integer $m\ge1$, the free-product image is
+\[
+ \pi(w^m)=u_0(u_1u_0u_2)^{2m}u_0.
+\]
+This is reduced of length $6m+2$, so $w^m\ne1$.
+The source defines $M_kVPT_3=\ker\Phi_{3,k}$, with
+$\Phi_{3,k}(s_i)=\Phi_{3,k}(\rho_i^\alpha)=(i\ i+1)$,
+and $M_kVHT_3=\ker\Psi_{3,k}$, with
+$\Psi_{3,k}(s_i)=1$, $\Psi_{3,k}(\rho_i^\alpha)=(i\ i+1)$
+\cite[Sections~3.1--3.2, pp.~6--7, 13]{KMPN}.
+Every $x_\beta$ maps to $(1\ 2)^2=1$ under both maps.
+Thus $F$, and in particular $w$, belongs to both subgroups.
+Families $2$--$8$ have the same virtual blocks $R(y_\alpha)$;
+family $1$ is trivial. Each therefore kills $F'$ and hence $w$.
+Conjugating a representation does not change its kernel.
+Together with the source classification this gives unfaithfulness
+of every homogeneous $2$-local representation in this range.
+Their common kernel on $V$, over all family and parameter choices,
+is exactly $F'$, since Theorem~\ref{thm:kernel} already determines
+the intersection for family $8$.
+\end{proof}
+
+\begin{corollary}\label{cor:two}
+For $k=2$, the restriction $\zeta_8|_V$ is faithful if and only if
+$q=y_1/y_0$ has infinite multiplicative order. If $q$ has order $m$,
+its kernel is $\langle(r_0r_1)^m\rangle$, an infinite cyclic group
+contained in both associated subgroups. For $k\ge2$, any root-of-unity
+ratio $y_\beta/y_\alpha$ similarly gives the infinite-order kernel
+element $(r_\alpha r_\beta)^m$, for $\alpha\ne\beta$ and ratio order $m$.
+\end{corollary}
+\begin{proof}
+For $k=2$, $F=\langle x_1\rangle\cong\mathbb Z$, and
+\eqref{eq:kernel} is exactly $q^e=1$.
+For any two distinct colors the image of
+$(r_\alpha r_\beta)^{mt}$ is the reduced word
+$(u_\alpha u_\beta)^{mt}$, of positive length $2mt$ for $t\ge1$.
+Its matrix image is $D((y_\beta/y_\alpha)^m)=I_3$.
+Both permutation maps kill $r_\alpha r_\beta$.
+\end{proof}
+
+\section{A welded sibling and coverage}
+The multi-welded group $M_kWT_n$ in \cite[Definition~2.1]{NO}
+adds to \eqref{eq:squares}--\eqref{eq:detour} the relations
+\begin{equation}\label{eq:welded}
+ \rho_i^\alpha s_{i+1}s_i=s_{i+1}s_i\rho_{i+1}^\alpha.
+\end{equation}
+Its family $\delta_1$ \cite[Theorem~3.2]{NO} has virtual blocks
+$R(y_\alpha)$, with $y_0=1$, and twin block $R(z)$, where $z\ne0$.
+In the source notation $y_\beta=r_2/s_{2,\beta}$ and $z=r_2/s$.
+Proposition~3.4 of that paper already proves unfaithfulness for
+$k\ge1$, $n\ge3$. The following is an alternative proof with
+infinite-order kernel in the indicated smaller range.
+
+\begin{corollary}\label{cor:welded}
+For $k\ge2$ and $n=3$, every member of $\delta_1$ kills the
+infinite-order element $[s_1\rho_1^0,s_1\rho_1^1]$ of $M_kWT_3$.
+For $k\ge3$, the element $w$ of Corollary~\ref{cor:main} also
+has infinite order in this quotient and belongs to its kernel.
+\end{corollary}
+\begin{proof}
+The homomorphism $\pi$ above also respects \eqref{eq:welded}:
+both sides map to $u_\alpha vv=vvu_\alpha=u_\alpha$.
+Thus $s_1,r_0,\ldots,r_{k-1}$ still generate their free product
+in the quotient, by the same section argument.
+The first displayed commutator has $m$th power image
+$v(u_0vu_1)^{2m}v$, a reduced word of length $6m+2$.
+Both $\delta_1(s_1r_0)$ and $\delta_1(s_1r_1)$ are diagonal,
+since they multiply two $R$ blocks. This proves the first assertion.
+The reduced-word and diagonal calculations for $w$ are unchanged.
+\end{proof}
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.34\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Source item & Coverage and attribution\\
+\midrule
+\cite[Question~4.3, p.~17]{KMPN}
+& Answered: no for $n=3$, $k\ge3$, all parameters; also for
+$k\ge2$ with a root-of-unity color ratio.\\
+\cite[Theorem~4.2(a)--(b), p.~17]{KMPN}
+& Prior proof cited for families $1$--$7$ and exceptional $a$.
+Extended to all $a$ for $n=3$, $k\ge3$, with a common infinite-order element.\\
+\cite[Sections~3.1--3.2; Section~6]{KMPN}
+& Not posed as a faithfulness assertion; obstruction proved for
+both subgroup restrictions. No general representation classification follows.\\
+Same-position color subgroup
+& Not posed; exact kernel proved in Theorem~\ref{thm:kernel}.
+The two-color criterion concerns this subgroup, not the whole group.\\
+\cite[Theorem~11(2), p.~7]{NCD}
+& Prior proof cited for equal/opposite involution blocks.
+Corollary~\ref{cor:two} extends their $q=1,-1$ mechanisms to every finite order.\\
+\cite[Section~6, p.~26]{KMPN}: welded construction
+& Prior construction cited: Nasser--Ocampo, May~29, 2026,
+\cite[Definition~2.1]{NO}. Not an open construction problem.\\
+\cite[Proposition~3.4, p.~12]{NO}
+& Reproved in part; prior proof Nasser--Ocampo (2026).
+Corollary~\ref{cor:welded} strengthens the kernel conclusion at $n=3$, $k\ge2$.\\
+\cite[Theorems~4.4, 5.3--5.4; Section~6]{KMPN}
+& Irreducibility and general $(k,n)$ subgroup representation
+classifications: not covered.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+For the full group $G_{k,n}$, the remaining faithfulness cases
+$n\ge4$ and $n=3$, $k\le2$ outside the root-of-unity obstruction
+are not decided by these arguments. In particular, faithfulness on $V$
+does not imply faithfulness on $G_{k,3}$.
+
+\section{Formal and exact-arithmetic scope}
+The pinned
+\href{https://github.com/the-omega-institute/trureturing/blob/4a7117cee792c7d5598d7f4770577d557fb45137/D5/S3/Quantum/Algebra/Knot/MultiVirtualTwinZetaEightFaithfulnessRefutation.lean}{Lean file}
+contains the public declaration \texttt{result : $\neg$ claim}.
+Here \texttt{claim} is the universal affirmative formulation of Question~4.3
+(existence and injectivity for every $k\ge1$, $n\ge3$, permitted
+$a\ne0,\pm1$, and nonzero denominator parameters), not an assertion
+made by the question's authors.
+The declaration negates that formulation using $k=n=3$, $a=2$, $b=1$
+and $y_\alpha=1$.
+In that file, \texttt{kernelWord\_ne\_one} proves nonidentity using
+the $S_4$ image $(0\ 2)(1\ 3)$ under
+$u_0\mapsto(0\ 1)$, $u_1\mapsto(1\ 2)$, $u_2\mapsto(2\ 3)$.
+The helper declarations \texttt{zeta\_kernel} and
+\texttt{zeta\_not\_injective} give the identity image and
+noninjectivity for any homomorphism with the prescribed images at $k=n=3$.
+
+The exact color-subgroup kernel, free-product embeddings, infinite order,
+$k>3$, the other seven families, subgroup restrictions, two-color criterion
+and welded corollary have the written proofs above.
+The accompanying \texttt{verify.py} uses exact integer Laurent-polynomial
+arithmetic for the defining matrices and checks the independent permutation
+image. It also supplies finite reduced-word controls for the stated
+subgroup and welded formulas; their all-exponent conclusions follow
+from the written proofs, not from extrapolation of finite checks.
+
+\begin{thebibliography}{3}
+\bibitem{KMPN}
+V. Keshari, T. I. Mayassi, M. Prabhakar and M. N. Nasser,
+\emph{Presentations and Representations of the Multi-Virtual Twin Group
+and Associated Subgroups}, arXiv:2605.13090v1, May~13, 2026.
+\href{https://arxiv.org/abs/2605.13090v1}{arXiv:2605.13090v1}.
+\bibitem{NO}
+M. N. Nasser and O. Ocampo, \emph{Multi-welded twin groups},
+arXiv:2605.31298v1, May~29, 2026.
+\href{https://arxiv.org/abs/2605.31298v1}{arXiv:2605.31298v1}.
+\bibitem{NCD}
+M. N. Nasser, M. Y. Chreif and M. M. Dally,
+\emph{Local Representations of the Flat Virtual Braid Group},
+arXiv:2503.06607v1, March~9, 2025.
+\href{https://arxiv.org/abs/2503.06607v1}{arXiv:2503.06607v1}.
+\end{thebibliography}
+\noindent\footnotesize\textcopyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under CC BY 4.0 (Creative Commons Attribution 4.0 International).
+\end{document}

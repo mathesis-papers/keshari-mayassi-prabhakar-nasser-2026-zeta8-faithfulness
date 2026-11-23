@@ -1,0 +1,164 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "4a7117cee792c7d5598d7f4770577d557fb45137",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4a7117cee792c7d5598d7f4770577d557fb45137/D5/S3/Quantum/Algebra/Knot/MultiVirtualTwinZetaEightFaithfulnessRefutation.lean"
+      },
+      "lineage": "collected:keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness:s1",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\GL": "\\mathrm{GL}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness",
+      "scope": "in_scope",
+      "statement": "Let $k\\ge1$ and $n=3$. Write $r_\\alpha=\\rho_1^\\alpha$,\n$V=\\langle r_0,\\ldots,r_{k-1}\\rangle\\le G_{k,3}$ and\n$x_\\beta=r_0r_\\beta$ for $1\\le\\beta<k$.\nThen $V$ is the free product of $k$ groups of order two.\nIts even-word subgroup $F$ is free on the $x_\\beta$.\nFor $h\\in F$, let $e_\\beta(h)\\in\\mathbb Z$ be the exponent sum of\n$x_\\beta$ in $h$, and put $q_\\beta=y_\\beta/y_0$. For every allowed\n$a,b,y_\\alpha$,\n\\begin{equation}\n \\ker(\\zeta_8|_V)\n =\\left\\{h\\in F:\\prod_{\\beta=1}^{k-1}q_\\beta^{e_\\beta(h)}=1\\right\\}.\n\\end{equation}\nIn particular, its intersection over all parameter choices is $F'=[F,F]$.\nIf the $q_\\beta$ are multiplicatively independent, the kernel itself is $F'$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Keshari–Mayassi–Prabhakar–Nasser's unfaithfulness theorem: a negative answer to their zeta8 faithfulness question",
+      "toolchain": null,
+      "version": 2,
+      "work": "keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness:2:s2",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "4a7117cee792c7d5598d7f4770577d557fb45137",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4a7117cee792c7d5598d7f4770577d557fb45137/D5/S3/Quantum/Algebra/Knot/MultiVirtualTwinZetaEightFaithfulnessRefutation.lean"
+      },
+      "lineage": "collected:keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness:s2",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\GL": "\\mathrm{GL}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness",
+      "scope": "in_scope",
+      "statement": "For $k\\ge3$, $n=3$ and all allowed parameters,\n\\[\n w=[r_0r_1,r_0r_2]\n\\]\nhas infinite order and lies in $\\ker\\zeta_8$. It lies in both\n$M_kVPT_3$ and $M_kVHT_3$, and their restricted representations\nhave $\\langle w\\rangle$ in their kernels.\nMoreover, all eight homogeneous $2$-local families in\n\\cite[Theorem~4.1]{KMPN}, and every representation equivalent to them,\nkill $w$ and are unfaithful in this range.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Keshari–Mayassi–Prabhakar–Nasser's unfaithfulness theorem: a negative answer to their zeta8 faithfulness question",
+      "toolchain": null,
+      "version": 2,
+      "work": "keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness:2:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "4a7117cee792c7d5598d7f4770577d557fb45137",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4a7117cee792c7d5598d7f4770577d557fb45137/D5/S3/Quantum/Algebra/Knot/MultiVirtualTwinZetaEightFaithfulnessRefutation.lean"
+      },
+      "lineage": "collected:keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness:s3",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\GL": "\\mathrm{GL}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness",
+      "scope": "in_scope",
+      "statement": "For $k=2$, the restriction $\\zeta_8|_V$ is faithful if and only if\n$q=y_1/y_0$ has infinite multiplicative order. If $q$ has order $m$,\nits kernel is $\\langle(r_0r_1)^m\\rangle$, an infinite cyclic group\ncontained in both associated subgroups. For $k\\ge2$, any root-of-unity\nratio $y_\\beta/y_\\alpha$ similarly gives the infinite-order kernel\nelement $(r_\\alpha r_\\beta)^m$, for $\\alpha\\ne\\beta$ and ratio order $m$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Keshari–Mayassi–Prabhakar–Nasser's unfaithfulness theorem: a negative answer to their zeta8 faithfulness question",
+      "toolchain": null,
+      "version": 2,
+      "work": "keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "4a7117cee792c7d5598d7f4770577d557fb45137",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/4a7117cee792c7d5598d7f4770577d557fb45137/D5/S3/Quantum/Algebra/Knot/MultiVirtualTwinZetaEightFaithfulnessRefutation.lean"
+      },
+      "lineage": "collected:keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness:s4",
+      "macros": {
+        "\\C": "\\mathbb C",
+        "\\GL": "\\mathrm{GL}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness",
+      "scope": "in_scope",
+      "statement": "For $k\\ge2$ and $n=3$, every member of $\\delta_1$ kills the\ninfinite-order element $[s_1\\rho_1^0,s_1\\rho_1^1]$ of $M_kWT_3$.\nFor $k\\ge3$, the element $w$ of Corollary~\\ref{cor:main} also\nhas infinite order in this quotient and belongs to its kernel.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Keshari–Mayassi–Prabhakar–Nasser's unfaithfulness theorem: a negative answer to their zeta8 faithfulness question",
+      "toolchain": null,
+      "version": 2,
+      "work": "keshari-mayassi-prabhakar-nasser-2026-zeta8-faithfulness"
+    }
+  ]
+}
